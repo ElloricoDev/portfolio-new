@@ -9,7 +9,7 @@ COPY public ./public
 COPY resources ./resources
 RUN npm run build
 
-FROM php:8.2-apache
+FROM php:8.4-apache
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
 RUN sed -ri 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/sites-available/*.conf
 
@@ -19,9 +19,12 @@ RUN apt-get update && apt-get install -y \
     unzip \
     libzip-dev \
     libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
     libonig-dev \
     libxml2-dev \
     libcurl4-openssl-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install \
     pdo \
     pdo_mysql \
@@ -29,6 +32,7 @@ RUN apt-get update && apt-get install -y \
     zip \
     xml \
     curl \
+    gd \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Composer
