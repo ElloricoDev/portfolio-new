@@ -93,7 +93,7 @@
                         <div class="mt-6 flex flex-wrap items-center gap-4">
                             <a
                                 :href="portfolio.cta.contactUrl"
-                                class="rounded-full bg-[color:var(--color-accent)] px-6 py-3 text-sm font-semibold text-slate-900 transition hover:-translate-y-0.5 hover:shadow-lg"
+                                class="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-slate-900 transition hover:-translate-y-0.5 hover:shadow-lg"
                             >
                                 {{ portfolio.cta.contactLabel }}
                             </a>
@@ -162,19 +162,19 @@
                         <div class="mt-8 grid gap-3 text-sm text-slate-300">
                             <div class="flex items-center gap-3">
                                 <span
-                                    class="h-2 w-2 rounded-full bg-[color:var(--color-accent)]"
+                                    class="h-2 w-2 rounded-full bg-accent"
                                 ></span>
                                 <span>Legacy system migration</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <span
-                                    class="h-2 w-2 rounded-full bg-[color:var(--color-accent-2)]"
+                                    class="h-2 w-2 rounded-full bg-accent-2"
                                 ></span>
                                 <span>SPA architecture with Vue</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <span
-                                    class="h-2 w-2 rounded-full bg-[color:var(--color-accent-3)]"
+                                    class="h-2 w-2 rounded-full bg-accent-3"
                                 ></span>
                                 <span>Government and academic systems</span>
                             </div>
@@ -302,7 +302,7 @@
                                     class="flex gap-2"
                                 >
                                     <span
-                                        class="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[color:var(--color-accent)]"
+                                        class="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent"
                                     ></span>
                                     <span>{{ point }}</span>
                                 </li>
@@ -363,7 +363,7 @@
                                     class="flex gap-2"
                                 >
                                     <span
-                                        class="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[color:var(--color-accent-2)]"
+                                        class="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent-2"
                                     ></span>
                                     <span>{{ bullet }}</span>
                                 </li>
