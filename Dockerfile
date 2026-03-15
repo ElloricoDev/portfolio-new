@@ -1,5 +1,3 @@
-# syntax=docker/dockerfile:1
-
 FROM node:20-alpine AS assets
 WORKDIR /app
 COPY package*.json ./
@@ -54,3 +52,4 @@ COPY --from=assets /app/public/build /var/www/html/public/build
 RUN chown -R www-data:www-data storage bootstrap/cache
 
 EXPOSE 80
+
