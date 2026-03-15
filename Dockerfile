@@ -41,7 +41,7 @@ WORKDIR /var/www/html
 
 # Install PHP deps first (cache layer)
 COPY composer.json composer.lock ./
-RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
+RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist --no-scripts
 
 # App source
 COPY . .
@@ -52,4 +52,5 @@ COPY --from=assets /app/public/build /var/www/html/public/build
 RUN chown -R www-data:www-data storage bootstrap/cache
 
 EXPOSE 80
+
 
