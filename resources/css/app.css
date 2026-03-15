@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@source '../**/*.vue';
+
+@theme {
+    --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+        'Courier New', monospace;
+    --color-surface: #0b1020;
+    --color-surface-2: #11162a;
+    --color-accent: #f97316;
+    --color-accent-2: #38bdf8;
+    --color-accent-3: #facc15;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-sans);
+        background: radial-gradient(circle at top, rgba(56, 189, 248, 0.14), transparent 45%),
+            radial-gradient(circle at 30% 20%, rgba(249, 115, 22, 0.16), transparent 40%),
+            linear-gradient(180deg, #0b1020 0%, #0f172a 55%, #020617 100%);
+        color: #e2e8f0;
+        min-height: 100vh;
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+@layer utilities {
+    .text-gradient {
+        background: linear-gradient(120deg, var(--color-accent) 0%, var(--color-accent-2) 50%, var(--color-accent-3) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .glass {
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        backdrop-filter: blur(12px);
+    }
+
+    .card-shadow {
+        box-shadow: 0 24px 60px rgba(2, 6, 23, 0.6);
+    }
+
+    .ring-soft {
+        box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.2);
+    }
+
+    .section-pad {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
