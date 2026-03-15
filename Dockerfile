@@ -44,7 +44,7 @@ COPY composer.json composer.lock ./
 RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist --no-scripts
 
 # App source
-COPY . .
+COPY . .\n\n# Remove any cached config/routes from build context\nRUN rm -f bootstrap/cache/*.php\n
 
 # Frontend build output
 COPY --from=assets /app/public/build /var/www/html/public/build
@@ -52,5 +52,6 @@ COPY --from=assets /app/public/build /var/www/html/public/build
 RUN chown -R www-data:www-data storage bootstrap/cache
 
 EXPOSE 80
+
 
 
