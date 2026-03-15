@@ -47,7 +47,7 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-di
 COPY . .
 
 # Remove any cached config/routes from build context
-RUN rm -f bootstrap/cache/*.php
+RUN rm -f bootstrap/cache/*.php\n\n# Ensure sqlite database file exists (avoids runtime errors if sqlite is used)\nRUN mkdir -p database && touch database/database.sqlite
 
 # Frontend build output
 COPY --from=assets /app/public/build /var/www/html/public/build
@@ -55,3 +55,4 @@ COPY --from=assets /app/public/build /var/www/html/public/build
 RUN chown -R www-data:www-data storage bootstrap/cache
 
 EXPOSE 80
+
