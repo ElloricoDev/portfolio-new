@@ -5,7 +5,7 @@ export const portfolio = {
     pitch: "I build reliable, user-focused web systems with Laravel, Vue, and Tailwind. I enjoy modernizing legacy apps and shipping clean, maintainable code.",
     cta: {
         resumeLabel: "Download Resume",
-        resumeUrl: "/resume",
+        resumeUrl: "/resume.pdf",
         contactLabel: "Let's Talk",
         contactUrl: "#contact",
     },

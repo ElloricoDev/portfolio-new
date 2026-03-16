@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Kim Rynel C.(Cloma) Ellorico | Portfolio</title>
+        <title>Kim Rynel C. Ellorico | Portfolio</title>
 
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
         <link rel="preconnect" href="https://fonts.googleapis.com">
