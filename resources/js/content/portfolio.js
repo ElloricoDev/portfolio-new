@@ -138,7 +138,7 @@ export const portfolio = {
     },
     contact: {
         title: "Contact",
-        email: "kimrynelellorico05@gmail.com",
+        email: "kimrynelclomaellorico@gmail.com",
         links: [
             { label: "GitHub", url: "https://github.com/ElloricoDev" },
             {
